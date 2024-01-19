@@ -21,4 +21,4 @@ Welcome to the Pokemon Card Site! This is a web application where you can explor
 1. **Clone the repository:**
 2. **Install Dependencies:** npm i
 3. **Run the Application:** npm start
- The application will be accessible at http://localhost:3000 in your browser.
+4. **The application will be accessible at http://localhost:3000 in your browser.**
