@@ -13,6 +13,13 @@
   }
 
   @include onPhone {
-    width: 100%
+    width: 100%;
+  }
+
+  &--mobile-hidden {
+    @include onPhone {
+      display: none;
+    }
   }
 }
+

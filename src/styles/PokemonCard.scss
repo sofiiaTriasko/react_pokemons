@@ -4,11 +4,15 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  margin: 16px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
   height: 100%;
+  margin: 0 auto;
+
+  @include onPhone{
+    display: block;
+  }
 
   &__image-container {
     text-align: center;

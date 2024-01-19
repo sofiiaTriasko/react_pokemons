@@ -16,5 +16,10 @@
     width: 100%;
   }
 }
+@media (max-width: 744px) {
+  .pokemons--mobile-hidden {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=PokemonList.css.map */

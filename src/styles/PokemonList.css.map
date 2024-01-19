@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["PokemonList.scss","../utils/_mixins.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;ACPA;EDCF;IASI;;;ACJF;EDLF;IAaI","file":"PokemonList.css"}
+{"version":3,"sourceRoot":"","sources":["PokemonList.scss","../utils/_mixins.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;ACPA;EDCF;IASI;;;ACJF;EDLF;IAaI;;;ACRF;EDWA;IAEI","file":"PokemonList.css"}

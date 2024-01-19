@@ -8,7 +8,7 @@ import { PokemonCard } from './components/PokemonCard';
 import {Pokemon} from "./types/Pokemon";
 import { Error} from "./utils/Error";
 import "./styles/app.scss"
-import {PokemonCardFilter} from "./components/PokemonTypeFilter";
+import {PokemonTypeFilter} from "./components/PokemonTypeFilter";
 import {FilterValue} from "./utils/FilterValue";
 
 export const App: React.FC = () => {
@@ -16,11 +16,9 @@ export const App: React.FC = () => {
     const [errorMessage, setErrorMessage] = useState<Error>(Error.NoError);
     const [isLoading, setIsLoading] = useState(false);
     const [page, setPage] = useState<number>(1);
-    const [isShown, setIsShown] = useState(true);
-    const [selectedPokemon, setSelectedPokemon] = useState<Pokemon>();
+    const [isShownCard, setIsShownCard] = useState(false);
+    const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | undefined>();
     const [filterValue, setFilterValue] = useState(FilterValue.All);
-    //
-    // const [offset, setOffset] = useState(0);
 
     const offset = (page - 1) * 9;
     console.log(offset)
@@ -28,6 +26,8 @@ export const App: React.FC = () => {
 
     const fetchPokemons = async () => {
             try {
+
+                setIsLoading(true);
                 const data = await getPokemons(url);
 
                     const detailedPokemons = await Promise.all(
@@ -43,6 +43,9 @@ export const App: React.FC = () => {
 
             } catch (error) {
                 console.error('Error fetching Pokémon data:', error);
+            }
+            finally{
+                setIsLoading(false)
             }
         }
 
@@ -62,7 +65,7 @@ export const App: React.FC = () => {
 
 
     const showPokemonDetails = (pokemon: Pokemon) => {
-        setIsShown(true);
+        setIsShownCard(!isShownCard);
         setSelectedPokemon(pokemon);
         console.log('clicked')
     };
@@ -91,15 +94,26 @@ export const App: React.FC = () => {
 
     return (
         <div className="app">
-            <div className="app__header">
+            <div className="app__header" >
             <a href='/' className="app__logo"></a>
-                <PokemonCardFilter setFilterValue={setFilterValue} filterValue={filterValue}/>
+                <PokemonTypeFilter setFilterValue={setFilterValue} filterValue={filterValue}/>
             </div>
             <div className="app__content">
-            <PokemonsList pokemons={getFilteringPokemons()} showPokemonDetails={showPokemonDetails}/>
-                {isShown &&
-                    selectedPokemon && <PokemonCard pokemon={selectedPokemon}/>
+                {isLoading ? (<div className="app__loader"></div>) :(
+                    <>
+            <PokemonsList
+                pokemons={getFilteringPokemons()}
+                showPokemonDetails={showPokemonDetails}
+                isShownCard={isShownCard}
+            />
+                {isShownCard && selectedPokemon &&
+                    <PokemonCard
+                        pokemon={selectedPokemon}
+                        setIsShown={setIsShownCard}
+                    />
                 }
+                </>
+            )}
 
             </div>
             <button onClick={handleClick} className="app__button-load">Load more</button>

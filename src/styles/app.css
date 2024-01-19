@@ -6,6 +6,16 @@
   padding-bottom: 20px;
   background-color: #EBF1F8;
 }
+.app__loader {
+  display: block;
+  background-image: url(../images/pokemon_icon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  background-size: contain;
+  width: 150px;
+  height: 50px;
+}
 .app__content {
   display: flex;
   background: #fff;
@@ -14,14 +24,16 @@
   padding: 20px;
 }
 .app__header {
-  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 70px;
   background-color: #ffffff;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 .app__logo {
-  display: block;
+  display: flex;
   background-image: url(../images/pokemon_logo.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -29,9 +41,6 @@
   background-size: contain;
   width: 150px;
   height: 50px;
-  position: absolute;
-  top: 5px;
-  left: 20px;
 }
 .app__button-load {
   background-color: #5090D6;
