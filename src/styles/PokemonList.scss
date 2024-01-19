@@ -1,0 +1,18 @@
+@import '../utils/_mixins.scss';
+
+.pokemons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 60%;
+  gap: 10px;
+  padding-left: 20px;
+
+  @include onTablet {
+    width: 30%
+  }
+
+  @include onPhone {
+    width: 100%
+  }
+}

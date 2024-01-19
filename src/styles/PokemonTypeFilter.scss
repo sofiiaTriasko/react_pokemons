@@ -1,0 +1,76 @@
+@import '../utils/_mixins.scss';
+
+.filter {
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 300px;
+
+  @include onPhone {
+    display: none;
+  }
+
+  @include onTablet {
+    display: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+
+    &:hover {
+      background-color: #ddd;
+    }
+
+    &.selected {
+      color: #fff;
+      background-color: #FFD800;
+    }
+
+    &-water.selected {
+      background-color: deepskyblue;
+    }
+
+    &-fire.selected {
+      background-color: orange;
+    }
+
+    &-grass.selected {
+      background-color: green;
+    }
+
+    &-poison.selected {
+      background-color: red;
+    }
+
+    &-flying.selected {
+      background-color: mediumpurple;
+    }
+
+    &-bug.selected {
+      background-color: goldenrod;
+    }
+
+    &-normal.selected {
+      background-color: lightslategrey;
+    }
+
+    &-electic.selected {
+      background-color: deeppink;
+    }
+
+    &-ground.selected {
+      background-color: saddlebrown;
+    }
+
+    &-all.selected {
+      background-color: black;
+    }
+  }
+}

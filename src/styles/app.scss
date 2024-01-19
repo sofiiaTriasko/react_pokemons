@@ -1,0 +1,74 @@
+@import '../utils/_mixins.scss';
+
+.app {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #4d4d4d;
+  padding-bottom: 20px;
+  background-color: #EBF1F8;
+
+  &__content {
+    display: flex;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    margin: 40px 20px;
+    padding: 20px;
+  }
+
+  &__header {
+    height: 50px;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+
+  &__logo {
+    display: block;
+    background-image: url(../images/pokemon_logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+    background-size: contain;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+  }
+
+  &__button-load {
+    background-color: #5090D6;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    width: 50%;
+    margin-left: 40px;
+    cursor: pointer;
+  }
+
+  &__button-home {
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+    padding: 10px 15px;
+    background-color: #5090D6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__button-home:hover {
+    background-color: #2980b9;
+  }
+
+}

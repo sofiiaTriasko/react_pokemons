@@ -1,0 +1,83 @@
+@import '../utils/_mixins.scss';
+
+.pokemon-item {
+  font-family: Poppins, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #EDF6EC;;
+  border: 1px solid #f3f3f3;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 5px;
+  width: 25%;
+  height: 300px;
+  align-items: center;
+  text-align: center;
+
+  @include onTablet {
+    width: 80%
+  }
+
+  @include onPhone {
+    width: 100%
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border: 1px solid green;
+  }
+
+  &__image {
+    margin-top: 32px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    width: 100%;
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #060b35;
+    line-height: 18px;
+    margin: 20px 0;
+  }
+
+  &__types {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__type {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    background: darkred;
+    width: fit-content;
+    border-radius: 67px;
+    background: var(--Elementos-Terrestre, #D97845);
+
+  }
+}
+
+.water {
+  background-color: deepskyblue;
+}
+
+.fire {
+  background-color: orange;
+}
+
+.grass {
+  background-color: green;
+}
+
+.poison {
+  background-color: red;
+}
+
+.flying {
+  background-color: mediumpurple;
+}
