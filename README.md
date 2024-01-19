@@ -1,6 +1,6 @@
 # Pokemon Card Site
 
-Welcome to the Pokemon Card Site! This is a web application where you can explore pokemon cards, discovering more details about each pokemon , filter them by type, and enjoy a responsive design.
+Welcome to the Pokemon Card Site! This is a web application where you can explore pokemon cards, discovering more details about each pokemon , filter them by type, and enjoy a responsive design. This site is at https://sofiiatriasko.github.io/react_pokemons/
 
 ## Features
 - Explore a collection of Pokemon cards.
