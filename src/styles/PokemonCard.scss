@@ -1,0 +1,95 @@
+@import '../utils/_mixins.scss';
+
+.pokemon-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 100%;
+
+  &__image-container {
+    text-align: center;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__name {
+    font-size: 40px;
+    width: fit-content;
+    margin: 0;
+  }
+
+  &__number {
+    font-size: 1.5em;
+    width: fit-content;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  &__types {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+  }
+
+  &__type {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 20px;
+    background: darkred;
+    width: fit-content;
+    border-radius: 67px;
+    background: var(--Elementos-Terrestre, #D97845);
+    }
+
+  &__table{
+    width: 100%;
+    margin-top: 16px;
+    border-collapse: collapse;
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+.water {
+  background-color: deepskyblue;
+}
+
+.fire {
+  background-color: orange;
+}
+
+.grass {
+  background-color: green;
+}
+
+.poison {
+  background-color: red;
+}
+
+.flying {
+  background-color: mediumpurple;
+}

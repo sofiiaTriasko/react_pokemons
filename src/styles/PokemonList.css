@@ -1,0 +1,20 @@
+.pokemons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 60%;
+  gap: 10px;
+  padding-left: 20px;
+}
+@media (max-width: 1024px) {
+  .pokemons {
+    width: 30%;
+  }
+}
+@media (max-width: 744px) {
+  .pokemons {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=PokemonList.css.map */
