@@ -96,6 +96,10 @@
     border: none;
     cursor: pointer;
     width: 100%;
+
+    &:hover {
+      background-color: darkgreen;
+    }
   }
 
   &__content {

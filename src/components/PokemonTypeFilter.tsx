@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { FilterValue } from '../utils/FilterValue';
-import '../styles/PokemonTypeFilter.scss';
 
 type Props = {
     setFilterValue: (filterValue: FilterValue) => void;

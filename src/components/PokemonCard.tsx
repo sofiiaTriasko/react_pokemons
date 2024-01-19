@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import '../styles/PokemonCard.scss';
 import { Pokemon } from "../types/Pokemon";
 
 type Props = {

@@ -1,4 +1,11 @@
+@import 'app.scss';
+@import 'PokemonCard.scss';
+@import "PokemonList";
+@import 'PokemonTypeFilter.scss';
+@import 'PokemonItem.scss';
+@import 'Loading.scss';
 
 body {
   margin: 0 auto;
 }
+
