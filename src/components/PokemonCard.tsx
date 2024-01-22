@@ -4,13 +4,13 @@ import { Pokemon } from "../types/Pokemon";
 
 type Props = {
     pokemon: Pokemon;
-    setIsShown: (arg0: boolean)=>void;
+    handleInfoClick: ()=>void;
 };
 
-export const PokemonCard: React.FC<Props> = ({ pokemon, setIsShown}) => {
+export const PokemonCard: React.FC<Props> = ({ pokemon, handleInfoClick}) => {
     return (
         <>
-            <div className="pokemon-card" onClick={()=> setIsShown(false)}>
+            <div className="pokemon-card" onClick={handleInfoClick}>
                 <div className="pokemon-card__image-container">
                     <img
                         className="pokemon-card__image"

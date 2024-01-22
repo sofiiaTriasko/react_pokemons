@@ -12,12 +12,12 @@ export const App: React.FC = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [page, setPage] = useState<number>(1);
-    const [isShownCard, setIsShownCard] = useState(false);
     const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | undefined>();
     const [filterValue, setFilterValue] = useState(FilterValue.All);
 
     const offset = (page - 1) * 9;
     const url = `https://pokeapi.co/api/v2/pokemon/?limit=9&offset=${offset}`;
+    const isShownCard = Boolean(selectedPokemon);
 
     const fetchPokemons = async () => {
         try {
@@ -46,9 +46,10 @@ export const App: React.FC = () => {
     const handleClick = () => {
         setPage((prevPage) => prevPage + 1);
     };
+    const handleInfoClick = () => setSelectedPokemon(undefined);
+
 
     const showPokemonDetails = (pokemon: Pokemon) => {
-        setIsShownCard(!isShownCard);
         setSelectedPokemon(pokemon);
     };
 
@@ -83,7 +84,7 @@ export const App: React.FC = () => {
                         {isShownCard && selectedPokemon &&
                             <PokemonCard
                                 pokemon={selectedPokemon}
-                                setIsShown={setIsShownCard}
+                                handleInfoClick={handleInfoClick}
                             />
                         }
                     </>
