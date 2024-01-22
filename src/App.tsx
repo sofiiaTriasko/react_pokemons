@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import {getPokemonDetails, getPokemons} from './api/pokemons';
 import { PokemonsList } from './components/PokemonsList';
 import { PokemonCard } from './components/PokemonCard';
@@ -89,7 +89,12 @@ export const App: React.FC = () => {
                     </>
                 )}
             </div>
-            <button onClick={handleClick} className="app__button-load">Load more</button>
+            <button
+                onClick={handleClick}
+                className="app__button-load"
+                disabled={isLoading}
+            >
+                Load more</button>
             <a href="#" className="app__button-home">Home</a>
         </div>
     );

@@ -10,8 +10,6 @@ type Props = {
 };
 
 export const PokemonsList: React.FC<Props> = ({pokemons, showPokemonDetails, isShownCard}) => {
-    console.log(isShownCard)
-
     return (
         <>
             <div className={`pokemons ${isShownCard ? 'pokemons--mobile-hidden' : ''}`}>
